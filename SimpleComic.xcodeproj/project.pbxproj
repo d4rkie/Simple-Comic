@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09D422041DADCC2B00CB98EA /* UniversalDetector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09D421FB1DADCC0C00CB98EA /* UniversalDetector.framework */; };
+		09D422051DADCC2B00CB98EA /* XADMaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09D421D71DADCBFF00CB98EA /* XADMaster.framework */; };
 		28073CB00FF9956600D2602B /* extract.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 28073CAF0FF9956500D2602B /* extract.tiff */; };
 		28073E610FFC347200D2602B /* QuickComic.qlgenerator in Copy Quicklook plugin */ = {isa = PBXBuildFile; fileRef = 28073E2F0FFC327700D2602B /* QuickComic.qlgenerator */; };
 		2813145B0C0A7D5200EC007B /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 281314590C0A7D5200EC007B /* Credits.rtf */; };
@@ -15,10 +17,6 @@
 		281954EA0C1201E6001F5E95 /* TSSTManagedGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 281954E80C1201E5001F5E95 /* TSSTManagedGroup.m */; };
 		281C0D700CEE6FBA009A9696 /* TSSTBezelWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 283C4D7B0C43DF5300DB4FE9 /* TSSTBezelWindow.m */; };
 		283C4D5E0C43DE6900DB4FE9 /* TSSTImageUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 283C4D5C0C43DE6800DB4FE9 /* TSSTImageUtilities.m */; };
-		284348130DA95C4A00F602E2 /* UniversalDetector.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 284348050DA95C4300F602E2 /* UniversalDetector.framework */; };
-		284348140DA95C4A00F602E2 /* XADMaster.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 284348060DA95C4300F602E2 /* XADMaster.framework */; };
-		284348CD0DA95C5300F602E2 /* UniversalDetector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284348050DA95C4300F602E2 /* UniversalDetector.framework */; };
-		284348CE0DA95C5300F602E2 /* XADMaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284348060DA95C4300F602E2 /* XADMaster.framework */; };
 		284741461071B4820033BD88 /* TSSTGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 283C4D680C43DE8D00DB4FE9 /* TSSTGradientView.m */; };
 		284D381B101249BE00A37AB2 /* DTToolbarItems.m in Sources */ = {isa = PBXBuildFile; fileRef = 284D381A101249BE00A37AB2 /* DTToolbarItems.m */; };
 		2851C5A00FC8651C002927E0 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 2851C59F0FC8651C002927E0 /* dsa_pub.pem */; };
@@ -76,6 +74,139 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		09D421D61DADCBFF00CB98EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09D421C31DADCBFE00CB98EA /* XADMaster.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = XADMaster;
+		};
+		09D421D81DADCBFF00CB98EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09D421C31DADCBFE00CB98EA /* XADMaster.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1B34A97511C2FD0500396C26;
+			remoteInfo = libXADMaster.a;
+		};
+		09D421DA1DADCBFF00CB98EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09D421C31DADCBFE00CB98EA /* XADMaster.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1B91CD5E11D97E7C0081E40A;
+			remoteInfo = libXADMaster.win.a;
+		};
+		09D421DC1DADCBFF00CB98EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09D421C31DADCBFE00CB98EA /* XADMaster.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1B467B0115CD9A73001AB1DD;
+			remoteInfo = libXADMaster.ios.a;
+		};
+		09D421DE1DADCBFF00CB98EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09D421C31DADCBFE00CB98EA /* XADMaster.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1B5A7BA30A24F9B400B189EB;
+			remoteInfo = XADTest;
+		};
+		09D421E01DADCBFF00CB98EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09D421C31DADCBFE00CB98EA /* XADMaster.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1BBAB68B0EC274A3007FE6A2;
+			remoteInfo = XADTest2;
+		};
+		09D421E21DADCBFF00CB98EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09D421C31DADCBFE00CB98EA /* XADMaster.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1BC8931A0ED6F283006B47FE;
+			remoteInfo = XADTest3;
+		};
+		09D421E41DADCBFF00CB98EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09D421C31DADCBFE00CB98EA /* XADMaster.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1B3A68A2101BA12C00AE25A8;
+			remoteInfo = XADTest4;
+		};
+		09D421E61DADCBFF00CB98EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09D421C31DADCBFE00CB98EA /* XADMaster.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1B342390131D8B5B00CCDF77;
+			remoteInfo = XADTest5;
+		};
+		09D421E81DADCBFF00CB98EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09D421C31DADCBFE00CB98EA /* XADMaster.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1B31CB9213C6423600ED119E;
+			remoteInfo = XADTest6;
+		};
+		09D421EA1DADCBFF00CB98EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09D421C31DADCBFE00CB98EA /* XADMaster.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1B23DDC01185EBA300620319;
+			remoteInfo = unar;
+		};
+		09D421EC1DADCBFF00CB98EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09D421C31DADCBFE00CB98EA /* XADMaster.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1B91D18F11E1677B0081E40A;
+			remoteInfo = lsar;
+		};
+		09D421EE1DADCBFF00CB98EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09D421C31DADCBFE00CB98EA /* XADMaster.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1B91CDAC11D981E20081E40A;
+			remoteInfo = unar.exe;
+		};
+		09D421F01DADCBFF00CB98EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09D421C31DADCBFE00CB98EA /* XADMaster.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1B91D2EE11E694860081E40A;
+			remoteInfo = lsar.exe;
+		};
+		09D421FA1DADCC0C00CB98EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09D421F21DADCC0C00CB98EA /* UniversalDetector.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
+			remoteInfo = UniversalDetector;
+		};
+		09D421FC1DADCC0C00CB98EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09D421F21DADCC0C00CB98EA /* UniversalDetector.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1B23E0871190F29400620319;
+			remoteInfo = libUniversalDetector.a;
+		};
+		09D421FE1DADCC0C00CB98EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09D421F21DADCC0C00CB98EA /* UniversalDetector.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1B91CBE011D821A70081E40A;
+			remoteInfo = libUniversalDetector.win.a;
+		};
+		09D422001DADCC0C00CB98EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09D421F21DADCC0C00CB98EA /* UniversalDetector.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1B467B2615CD9B1F001AB1DD;
+			remoteInfo = libUniversalDetector.ios.a;
+		};
+		09D422021DADCC0C00CB98EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09D421F21DADCC0C00CB98EA /* UniversalDetector.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1B0DDCAB0A2D0AD10009B697;
+			remoteInfo = DetectorTest;
+		};
 		28073E2E0FFC327700D2602B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 28073DE20FFC2F8B00D2602B /* QuickComic.xcodeproj */;
@@ -104,17 +235,6 @@
 			name = "Copy Quicklook plugin";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		280B6BBA0A1BB34600EE91B0 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				284348130DA95C4A00F602E2 /* UniversalDetector.framework in CopyFiles */,
-				284348140DA95C4A00F602E2 /* XADMaster.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		28FD56E41224663D006AEB0F /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -127,6 +247,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		09D421C31DADCBFE00CB98EA /* XADMaster.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = XADMaster.xcodeproj; path = XADMaster/XADMaster.xcodeproj; sourceTree = "<group>"; };
+		09D421F21DADCC0C00CB98EA /* UniversalDetector.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = UniversalDetector.xcodeproj; path = UniversalDetector/UniversalDetector.xcodeproj; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		2803B2FE0D5E541800CD7906 /* TSSTManagedSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSSTManagedSession.h; sourceTree = "<group>"; };
 		2803B2FF0D5E541800CD7906 /* TSSTManagedSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSSTManagedSession.m; sourceTree = "<group>"; };
@@ -272,8 +394,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				284348CD0DA95C5300F602E2 /* UniversalDetector.framework in Frameworks */,
-				284348CE0DA95C5300F602E2 /* XADMaster.framework in Frameworks */,
+				09D422041DADCC2B00CB98EA /* UniversalDetector.framework in Frameworks */,
+				09D422051DADCC2B00CB98EA /* XADMaster.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				286236020AADDB6200B83E77 /* QuartzCore.framework in Frameworks */,
 				28BD08E60C9836E600BD7EAF /* Quartz.framework in Frameworks */,
@@ -301,6 +423,39 @@
 				287C611C106F80A9001463C6 /* Unused */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		09D421C41DADCBFE00CB98EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				09D421D71DADCBFF00CB98EA /* XADMaster.framework */,
+				09D421D91DADCBFF00CB98EA /* libXADMaster.a */,
+				09D421DB1DADCBFF00CB98EA /* libXADMaster.win.a */,
+				09D421DD1DADCBFF00CB98EA /* libXADMaster.ios.a */,
+				09D421DF1DADCBFF00CB98EA /* XADTest */,
+				09D421E11DADCBFF00CB98EA /* XADTest2 */,
+				09D421E31DADCBFF00CB98EA /* XADTest3 */,
+				09D421E51DADCBFF00CB98EA /* XADTest4 */,
+				09D421E71DADCBFF00CB98EA /* XADTest5 */,
+				09D421E91DADCBFF00CB98EA /* XADTest6 */,
+				09D421EB1DADCBFF00CB98EA /* unar */,
+				09D421ED1DADCBFF00CB98EA /* lsar */,
+				09D421EF1DADCBFF00CB98EA /* unar.exe */,
+				09D421F11DADCBFF00CB98EA /* lsar.exe */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		09D421F31DADCC0C00CB98EA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				09D421FB1DADCC0C00CB98EA /* UniversalDetector.framework */,
+				09D421FD1DADCC0C00CB98EA /* libUniversalDetector.a */,
+				09D421FF1DADCC0C00CB98EA /* libUniversalDetector.win.a */,
+				09D422011DADCC0C00CB98EA /* libUniversalDetector.ios.a */,
+				09D422031DADCC0C00CB98EA /* DetectorTest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
@@ -522,6 +677,8 @@
 		29B97314FDCFA39411CA2CEA /* MetaComic */ = {
 			isa = PBXGroup;
 			children = (
+				09D421F21DADCC0C00CB98EA /* UniversalDetector.xcodeproj */,
+				09D421C31DADCBFE00CB98EA /* XADMaster.xcodeproj */,
 				7756732906782D8800D1FEB8 /* Models */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				28073DE20FFC2F8B00D2602B /* QuickComic.xcodeproj */,
@@ -610,7 +767,6 @@
 			buildPhases = (
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
-				280B6BBA0A1BB34600EE91B0 /* CopyFiles */,
 				8D1107290486CEB800E47090 /* Resources */,
 				28073E0A0FFC305400D2602B /* Copy Quicklook plugin */,
 				28FD56E41224663D006AEB0F /* CopyFiles */,
@@ -656,6 +812,14 @@
 					ProductGroup = 28073E2B0FFC327700D2602B /* Products */;
 					ProjectRef = 28073DE20FFC2F8B00D2602B /* QuickComic.xcodeproj */;
 				},
+				{
+					ProductGroup = 09D421F31DADCC0C00CB98EA /* Products */;
+					ProjectRef = 09D421F21DADCC0C00CB98EA /* UniversalDetector.xcodeproj */;
+				},
+				{
+					ProductGroup = 09D421C41DADCBFE00CB98EA /* Products */;
+					ProjectRef = 09D421C31DADCBFE00CB98EA /* XADMaster.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -665,6 +829,139 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		09D421D71DADCBFF00CB98EA /* XADMaster.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = XADMaster.framework;
+			remoteRef = 09D421D61DADCBFF00CB98EA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		09D421D91DADCBFF00CB98EA /* libXADMaster.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libXADMaster.a;
+			remoteRef = 09D421D81DADCBFF00CB98EA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		09D421DB1DADCBFF00CB98EA /* libXADMaster.win.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libXADMaster.win.a;
+			remoteRef = 09D421DA1DADCBFF00CB98EA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		09D421DD1DADCBFF00CB98EA /* libXADMaster.ios.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libXADMaster.ios.a;
+			remoteRef = 09D421DC1DADCBFF00CB98EA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		09D421DF1DADCBFF00CB98EA /* XADTest */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = XADTest;
+			remoteRef = 09D421DE1DADCBFF00CB98EA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		09D421E11DADCBFF00CB98EA /* XADTest2 */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = XADTest2;
+			remoteRef = 09D421E01DADCBFF00CB98EA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		09D421E31DADCBFF00CB98EA /* XADTest3 */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = XADTest3;
+			remoteRef = 09D421E21DADCBFF00CB98EA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		09D421E51DADCBFF00CB98EA /* XADTest4 */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = XADTest4;
+			remoteRef = 09D421E41DADCBFF00CB98EA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		09D421E71DADCBFF00CB98EA /* XADTest5 */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = XADTest5;
+			remoteRef = 09D421E61DADCBFF00CB98EA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		09D421E91DADCBFF00CB98EA /* XADTest6 */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = XADTest6;
+			remoteRef = 09D421E81DADCBFF00CB98EA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		09D421EB1DADCBFF00CB98EA /* unar */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = unar;
+			remoteRef = 09D421EA1DADCBFF00CB98EA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		09D421ED1DADCBFF00CB98EA /* lsar */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = lsar;
+			remoteRef = 09D421EC1DADCBFF00CB98EA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		09D421EF1DADCBFF00CB98EA /* unar.exe */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = unar.exe;
+			remoteRef = 09D421EE1DADCBFF00CB98EA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		09D421F11DADCBFF00CB98EA /* lsar.exe */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = lsar.exe;
+			remoteRef = 09D421F01DADCBFF00CB98EA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		09D421FB1DADCC0C00CB98EA /* UniversalDetector.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = UniversalDetector.framework;
+			remoteRef = 09D421FA1DADCC0C00CB98EA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		09D421FD1DADCC0C00CB98EA /* libUniversalDetector.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libUniversalDetector.a;
+			remoteRef = 09D421FC1DADCC0C00CB98EA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		09D421FF1DADCC0C00CB98EA /* libUniversalDetector.win.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libUniversalDetector.win.a;
+			remoteRef = 09D421FE1DADCC0C00CB98EA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		09D422011DADCC0C00CB98EA /* libUniversalDetector.ios.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libUniversalDetector.ios.a;
+			remoteRef = 09D422001DADCC0C00CB98EA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		09D422031DADCC0C00CB98EA /* DetectorTest */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = DetectorTest;
+			remoteRef = 09D422021DADCC0C00CB98EA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		28073E2F0FFC327700D2602B /* QuickComic.qlgenerator */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
