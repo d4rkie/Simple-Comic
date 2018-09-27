@@ -1,22 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4471.1" systemVersion="12E55" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
-        <deployment version="1050" defaultVersion="1080" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4471.1"/>
+        <deployment version="1050" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="TSSTSessionWindowController">
             <connections>
-                <action selector="cancelJumpPanel:" destination="754" id="756"/>
-                <action selector="changeFullscreen:" destination="713" id="747"/>
-                <action selector="extractPage:" destination="689" id="692"/>
-                <action selector="goToPage:" destination="448" id="462"/>
-                <action selector="goToPage:" destination="752" id="757"/>
-                <action selector="rotate:" destination="586" id="588"/>
-                <action selector="setArchiveIcon:" destination="693" id="696"/>
-                <action selector="togglePageExpose:" destination="578" id="580"/>
-                <action selector="turnPage:" destination="554" id="698"/>
-                <action selector="zoom:" destination="557" id="560"/>
                 <outlet property="bezelWindow" destination="273" id="278"/>
                 <outlet property="exposeBezel" destination="373" id="375"/>
                 <outlet property="exposeView" destination="378" id="380"/>
@@ -36,9 +27,9 @@
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
-        <customObject id="-3" userLabel="Application"/>
-        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" deferred="NO" oneShot="NO" releasedWhenClosed="NO" wantsToBeColor="NO" visibleAtLaunch="NO" animationBehavior="default" id="6" userLabel="Main Window" customClass="DTSessionWindow">
-            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" unifiedTitleAndToolbar="YES"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" deferred="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="6" userLabel="Main Window" customClass="DTSessionWindow">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" topStrut="YES"/>
             <rect key="contentRect" x="0.0" y="145" width="460" height="553"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
@@ -64,11 +55,11 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </clipView>
-                        <scroller key="horizontalScroller" verticalHuggingPriority="750" id="506">
+                        <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="506">
                             <rect key="frame" x="0.0" y="514" width="460" height="16"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
-                        <scroller key="verticalScroller" verticalHuggingPriority="750" id="505">
+                        <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="505">
                             <rect key="frame" x="444" y="0.0" width="16" height="530"/>
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
@@ -88,7 +79,7 @@
                         <segmentedControl key="view" verticalHuggingPriority="750" id="554">
                             <rect key="frame" x="5" y="14" width="51" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <segmentedCell key="cell" alignment="left" style="texturedRounded" trackingMode="momentary" id="555">
+                            <segmentedCell key="cell" borderStyle="border" alignment="left" style="texturedRounded" trackingMode="momentary" id="555">
                                 <font key="font" metaFont="system"/>
                                 <segments>
                                     <segment toolTip="Left Page Turn" image="NSLeftFacingTriangleTemplate" width="22" tag="701">
@@ -97,6 +88,9 @@
                                     <segment toolTip="Right Page Turn" image="NSRightFacingTriangleTemplate" width="22" tag="702"/>
                                 </segments>
                             </segmentedCell>
+                            <connections>
+                                <action selector="turnPage:" target="-2" id="698"/>
+                            </connections>
                         </segmentedControl>
                     </toolbarItem>
                     <toolbarItem implicitItemIdentifier="E33C7D17-8160-4B40-8EDF-78600C84FE8C" label="Page Scaling" paletteLabel="Page Scaling" id="517" customClass="DTToolbarItem">
@@ -104,9 +98,9 @@
                         <size key="minSize" width="74" height="25"/>
                         <size key="maxSize" width="74" height="25"/>
                         <segmentedControl key="view" verticalHuggingPriority="750" id="515">
-                            <rect key="frame" x="0.0" y="14" width="74" height="25"/>
+                            <rect key="frame" x="1" y="14" width="74" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <segmentedCell key="cell" alignment="left" style="texturedRounded" trackingMode="selectOne" id="516">
+                            <segmentedCell key="cell" borderStyle="border" alignment="left" style="texturedRounded" trackingMode="selectOne" id="516">
                                 <font key="font" metaFont="system"/>
                                 <segments>
                                     <segment toolTip="Original Size" image="equal" width="22">
@@ -132,7 +126,7 @@
                         <segmentedControl key="view" verticalHuggingPriority="750" id="518">
                             <rect key="frame" x="8" y="14" width="51" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <segmentedCell key="cell" alignment="left" style="texturedRounded" trackingMode="selectOne" id="519">
+                            <segmentedCell key="cell" borderStyle="border" alignment="left" style="texturedRounded" trackingMode="selectOne" id="519">
                                 <font key="font" metaFont="system"/>
                                 <segments>
                                     <segment toolTip="Right to Left Page Order" image="rl_order" width="22"/>
@@ -151,7 +145,7 @@
                         <segmentedControl key="view" verticalHuggingPriority="750" id="521">
                             <rect key="frame" x="11" y="14" width="51" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <segmentedCell key="cell" alignment="left" style="texturedRounded" trackingMode="selectOne" id="522">
+                            <segmentedCell key="cell" borderStyle="border" alignment="left" style="texturedRounded" trackingMode="selectOne" id="522">
                                 <font key="font" metaFont="system"/>
                                 <segments>
                                     <segment toolTip="Single Page Layout" image="one_page" width="22"/>
@@ -170,13 +164,16 @@
                         <segmentedControl key="view" verticalHuggingPriority="750" id="586">
                             <rect key="frame" x="13" y="14" width="51" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <segmentedCell key="cell" alignment="left" style="texturedRounded" trackingMode="momentary" id="587">
+                            <segmentedCell key="cell" borderStyle="border" alignment="left" style="texturedRounded" trackingMode="momentary" id="587">
                                 <font key="font" metaFont="system"/>
                                 <segments>
                                     <segment toolTip="Rotate Left" image="rotate_l" width="22" tag="901"/>
                                     <segment toolTip="Rotate Right" image="rotate_r" width="22" tag="902"/>
                                 </segments>
                             </segmentedCell>
+                            <connections>
+                                <action selector="rotate:" target="-2" id="588"/>
+                            </connections>
                         </segmentedControl>
                     </toolbarItem>
                     <toolbarItem implicitItemIdentifier="C8491130-5672-4D81-9D91-76BB3F03D233" label="Zoom" paletteLabel="Zoom" id="559" customClass="DTToolbarItem">
@@ -186,7 +183,7 @@
                         <segmentedControl key="view" verticalHuggingPriority="750" id="557">
                             <rect key="frame" x="0.0" y="14" width="74" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <segmentedCell key="cell" alignment="left" style="texturedRounded" trackingMode="momentary" id="558">
+                            <segmentedCell key="cell" borderStyle="border" alignment="left" style="texturedRounded" trackingMode="momentary" id="558">
                                 <font key="font" metaFont="system"/>
                                 <segments>
                                     <segment toolTip="Zoom In" image="NSAddTemplate" width="22" tag="801"/>
@@ -196,6 +193,9 @@
                                     </segment>
                                 </segments>
                             </segmentedCell>
+                            <connections>
+                                <action selector="zoom:" target="-2" id="560"/>
+                            </connections>
                         </segmentedControl>
                     </toolbarItem>
                     <toolbarItem implicitItemIdentifier="55B2F7CD-2E3A-405A-BF65-65B5A68E94BD" label="Loupe" paletteLabel="Loupe" image="Loupe" id="575" customClass="DTToolbarItem">
@@ -235,12 +235,15 @@
                         <size key="minSize" width="27" height="25"/>
                         <size key="maxSize" width="27" height="25"/>
                         <button key="view" toolTip="Thumbnail View" verticalHuggingPriority="750" id="578">
-                            <rect key="frame" x="22" y="14" width="27" height="25"/>
+                            <rect key="frame" x="21" y="14" width="27" height="25"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <buttonCell key="cell" type="squareTextured" title="Thumbnails" bezelStyle="texturedSquare" image="thumbnails" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="579">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
+                            <connections>
+                                <action selector="togglePageExpose:" target="-2" id="580"/>
+                            </connections>
                         </button>
                     </toolbarItem>
                     <toolbarItem implicitItemIdentifier="7D6CA1DF-7F26-421E-874E-21596C513A14" label="Capture Page" paletteLabel="Capture Page" image="extract" id="688" customClass="DTToolbarItem">
@@ -254,6 +257,9 @@
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
+                            <connections>
+                                <action selector="extractPage:" target="-2" id="692"/>
+                            </connections>
                         </button>
                     </toolbarItem>
                     <toolbarItem implicitItemIdentifier="7ACC3052-A491-4940-83A9-B40928F5C001" label="Set Icon" paletteLabel="Set Icon" image="quicklook" id="693" customClass="DTToolbarItem">
@@ -268,6 +274,9 @@
                                 <font key="font" metaFont="system"/>
                             </buttonCell>
                         </button>
+                        <connections>
+                            <action selector="setArchiveIcon:" target="-2" id="696"/>
+                        </connections>
                     </toolbarItem>
                     <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="582"/>
                     <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="583"/>
@@ -304,12 +313,12 @@
                 <string>group</string>
             </declaredKeys>
             <connections>
-                <binding destination="-2" name="contentSet" keyPath="session.images" id="644"/>
                 <binding destination="-2" name="managedObjectContext" keyPath="managedObjectContext" id="86"/>
                 <binding destination="-2" name="sortDescriptors" keyPath="pageSortDescriptor" id="158"/>
+                <binding destination="-2" name="contentSet" keyPath="session.images" id="644"/>
             </connections>
         </arrayController>
-        <window title="Bezel" allowsToolTipsWhenApplicationIsInactive="NO" deferred="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" wantsToBeColor="NO" visibleAtLaunch="NO" animationBehavior="default" id="273" userLabel="Bezel" customClass="TSSTBezelWindow">
+        <window title="Bezel" allowsToolTipsWhenApplicationIsInactive="NO" deferred="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="273" userLabel="Bezel" customClass="TSSTBezelWindow">
             <windowStyleMask key="styleMask" titled="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="486" y="169" width="672" height="32"/>
@@ -327,7 +336,7 @@
                     <segmentedControl verticalHuggingPriority="750" id="699" customClass="TSSTSegmentedControl">
                         <rect key="frame" x="5" y="3" width="104" height="25"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <segmentedCell key="cell" alignment="left" style="texturedRounded" trackingMode="selectOne" id="700">
+                        <segmentedCell key="cell" borderStyle="border" alignment="left" style="texturedRounded" trackingMode="selectOne" id="700">
                             <font key="font" metaFont="system"/>
                             <segments>
                                 <segment toolTip="Original Size" image="equal" width="32">
@@ -348,7 +357,7 @@
                     <segmentedControl verticalHuggingPriority="750" id="705" customClass="TSSTSegmentedControl">
                         <rect key="frame" x="114" y="3" width="71" height="25"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <segmentedCell key="cell" alignment="left" style="texturedRounded" trackingMode="selectOne" id="706">
+                        <segmentedCell key="cell" borderStyle="border" alignment="left" style="texturedRounded" trackingMode="selectOne" id="706">
                             <font key="font" metaFont="system"/>
                             <segments>
                                 <segment toolTip="Single Page Layout" image="one_page" width="32"/>
@@ -362,7 +371,7 @@
                     <segmentedControl verticalHuggingPriority="750" id="709" customClass="TSSTSegmentedControl">
                         <rect key="frame" x="191" y="3" width="71" height="25"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <segmentedCell key="cell" alignment="left" style="texturedRounded" trackingMode="selectOne" id="710">
+                        <segmentedCell key="cell" borderStyle="border" alignment="left" style="texturedRounded" trackingMode="selectOne" id="710">
                             <font key="font" metaFont="system"/>
                             <segments>
                                 <segment toolTip="Right to Left Page Order" image="rl_order" width="32"/>
@@ -383,6 +392,9 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="changeFullscreen:" target="-2" id="747"/>
+                        </connections>
                     </button>
                 </subviews>
             </view>
@@ -390,7 +402,7 @@
                 <outlet property="delegate" destination="-2" id="277"/>
             </connections>
         </window>
-        <window title="InfoPane" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" releasedWhenClosed="NO" wantsToBeColor="NO" visibleAtLaunch="NO" animationBehavior="default" id="350" userLabel="Scrub Panel" customClass="TSSTInfoWindow">
+        <window title="InfoPane" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="350" userLabel="Scrub Panel" customClass="TSSTInfoWindow">
             <windowStyleMask key="styleMask" titled="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="222" y="490" width="104" height="104"/>
@@ -408,7 +420,7 @@
                 </subviews>
             </view>
         </window>
-        <window title="Panel" allowsToolTipsWhenApplicationIsInactive="NO" releasedWhenClosed="NO" showsToolbarButton="NO" wantsToBeColor="NO" visibleAtLaunch="NO" animationBehavior="default" id="363" userLabel="Loupe panel" customClass="TSSTInfoWindow">
+        <window title="Panel" allowsToolTipsWhenApplicationIsInactive="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="363" userLabel="Loupe panel" customClass="TSSTInfoWindow">
             <windowStyleMask key="styleMask" titled="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="932" y="284" width="200" height="200"/>
@@ -426,7 +438,7 @@
                 </subviews>
             </view>
         </window>
-        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" wantsToBeColor="NO" visibleAtLaunch="NO" animationBehavior="default" id="373" userLabel="expose" customClass="TSSTKeyWindow">
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="373" userLabel="expose" customClass="TSSTKeyWindow">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="545" y="211" width="480" height="360"/>
@@ -452,7 +464,7 @@
             </connections>
         </window>
         <userDefaultsController id="403" userLabel="Shared Defaults"/>
-        <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="445" userLabel="Jump" customClass="NSPanel">
+        <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="445" userLabel="Jump" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="468" width="229" height="42"/>
@@ -465,21 +477,18 @@
                         <rect key="frame" x="50" y="10" width="41" height="22"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" state="on" borderStyle="bezel" title="9999" drawsBackground="YES" id="503">
-                            <numberFormatter key="formatter" formatterBehavior="custom10_4" positiveFormat="#1" negativeFormat="#1" generatesDecimalNumbers="YES" allowsFloats="NO" usesGroupingSeparator="NO" groupingSize="0" minimumIntegerDigits="0" maximumIntegerDigits="42" minimumFractionDigits="0" maximumFractionDigits="0" id="454">
+                            <numberFormatter key="formatter" formatterBehavior="custom10_4" positiveFormat="#1" negativeFormat="#1" generatesDecimalNumbers="YES" allowsFloats="NO" usesGroupingSeparator="NO" paddingCharacter="*" groupingSize="0" minimumIntegerDigits="0" maximumIntegerDigits="42" decimalSeparator="." groupingSeparator="," currencyDecimalSeparator="." plusSign="+" minusSign="-" notANumberSymbol="NaN" perMillSymbol="‰" percentSymbol="%" exponentSymbol="E" positivePrefix="" positiveSuffix="" negativePrefix="-" negativeSuffix="" id="454">
                                 <integer key="roundingIncrement" value="1"/>
-                                <nil key="nilSymbol"/>
                                 <nil key="negativeInfinitySymbol"/>
                                 <nil key="positiveInfinitySymbol"/>
                                 <real key="maximum" value="9999"/>
-                                <metadata>
-                                    <bool key="localizesFormat" value="YES"/>
-                                </metadata>
                             </numberFormatter>
                             <font key="font" metaFont="system"/>
-                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                         <connections>
+                            <action selector="goToPage:" target="-2" id="462"/>
                             <binding destination="12" name="maxValue" keyPath="arrangedObjects.@count" id="458"/>
                         </connections>
                     </textField>
@@ -488,7 +497,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Page:" id="502">
                             <font key="font" metaFont="system"/>
-                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
@@ -502,6 +511,9 @@
 DQ
 </string>
                         </buttonCell>
+                        <connections>
+                            <action selector="goToPage:" target="-2" id="757"/>
+                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" id="754">
                         <rect key="frame" x="163" y="8" width="56" height="25"/>
@@ -513,11 +525,14 @@ DQ
 Gw
 </string>
                         </buttonCell>
+                        <connections>
+                            <action selector="cancelJumpPanel:" target="-2" id="756"/>
+                        </connections>
                     </button>
                 </subviews>
             </view>
         </window>
-        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="483" userLabel="Thumbnail" customClass="TSSTInfoWindow">
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="483" userLabel="Thumbnail" customClass="TSSTInfoWindow">
             <windowStyleMask key="styleMask" titled="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="160" width="350" height="350"/>
@@ -536,12 +551,12 @@ Gw
     </objects>
     <resources>
         <image name="Loupe" width="15" height="16"/>
-        <image name="NSAddTemplate" width="8" height="8"/>
-        <image name="NSEnterFullScreenTemplate" width="16" height="15"/>
-        <image name="NSExitFullScreenTemplate" width="16" height="15"/>
-        <image name="NSLeftFacingTriangleTemplate" width="9" height="9"/>
-        <image name="NSRemoveTemplate" width="8" height="8"/>
-        <image name="NSRightFacingTriangleTemplate" width="9" height="9"/>
+        <image name="NSAddTemplate" width="11" height="11"/>
+        <image name="NSEnterFullScreenTemplate" width="15" height="15"/>
+        <image name="NSExitFullScreenTemplate" width="15" height="15"/>
+        <image name="NSLeftFacingTriangleTemplate" width="9" height="12"/>
+        <image name="NSRemoveTemplate" width="11" height="11"/>
+        <image name="NSRightFacingTriangleTemplate" width="9" height="12"/>
         <image name="equal" width="11" height="12"/>
         <image name="extract" width="17" height="12"/>
         <image name="hor_scale" width="14" height="12"/>

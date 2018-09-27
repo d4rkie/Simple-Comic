@@ -33,14 +33,8 @@ cornerRadius, emptyGradient, barGradient, shadowGradient, highlightColor, number
 							[NSColor colorWithDeviceWhite: 0.75 alpha: 1], 0.5,
 							[NSColor colorWithDeviceWhite: 0.82 alpha: 1], 0.5,
 							[NSColor colorWithDeviceWhite: 0.92 alpha: 1], 1.0, nil];
-		NSShadow * stringEmboss = [NSShadow new];
-		[stringEmboss setShadowColor: [NSColor colorWithDeviceWhite: 0.9 alpha: 1]];
-		[stringEmboss setShadowBlurRadius: 0];
-		[stringEmboss setShadowOffset: NSMakeSize(1, -1)];
-		self.numberStyle = @{NSFontAttributeName: [NSFont fontWithName: @"Lucida Grande Bold" size: 10],
-							 NSForegroundColorAttributeName: [NSColor colorWithDeviceWhite: 0.2 alpha: 1],
-							 NSShadowAttributeName: stringEmboss};
-		[stringEmboss release];
+		self.numberStyle = @{NSFontAttributeName: [NSFont boldSystemFontOfSize: 10],
+							 NSForegroundColorAttributeName: [NSColor labelColor]};
 		self.horizontalMargin = 35;
 		self.cornerRadius = 4.0;
         self.leftToRight = YES;
