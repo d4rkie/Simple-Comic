@@ -1,10 +1,30 @@
+/*
+ * unar.m
+ *
+ * Copyright (c) 2017-present, MacPaw Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+ * MA 02110-1301  USA
+ */
 #import "XADSimpleUnarchiver.h"
 #import "NSStringPrinting.h"
 #import "CSCommandLineParser.h"
 #import "CommandLineCommon.h"
 #import "CSFileHandle.h"
 
-#define VERSION_STRING @"v1.10.1"
+#define VERSION_STRING @"v1.10.7"
 
 @interface Unarchiver:NSObject {}
 @end
@@ -352,15 +372,10 @@ int main(int argc,const char **argv)
 -(NSString *)simpleUnarchiver:(XADSimpleUnarchiver *)unarchiver replacementPathForEntryWithDictionary:(NSDictionary *)dict
 originalPath:(NSString *)path suggestedPath:(NSString *)unique
 {
-	// Skip files and report as error if not interactive.
+	// Return suggested path if not interactive.
  	if(!isinteractive)
 	{
-		[@"  " printToFile:errstream];
-		NSString *name=MediumInfoLineForEntryWithDictionary(dict);
-		[name printToFile:errstream];
-		[@"... Skipping existing file.\n" printToFile:errstream];
-		numerrors++;
-		return nil;
+		return unique;
 	}
 
 	[@"\"" printToFile:outstream];
